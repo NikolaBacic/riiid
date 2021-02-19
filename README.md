@@ -1,4 +1,4 @@
-# riiid
+# riiid - jan 2021
 Code for Riiid kaggle competition
 
 [Kaggle competition](https://www.kaggle.com/c/riiid-test-answer-prediction/)
