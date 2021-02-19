@@ -1,0 +1,63 @@
+#########################################################
+Submit: 
+Validation auc: 0.8048 LB: 0.805x (LSTM) 
+Validation auc: 0.8072. LB: 0.807x (Transformer)
+Ensemble Validation: unknown
+Ensemble LB: 0.809x
+#########################################################
+Submit: (12 dec. 2020)
+Validation auc: 0.8072 (Transformer)
+Validation auc: 0.8043 (LSTM) 
+Validation auc: 0.8041 (GRU)
+Ensemble Validation: 0.8091
+Ensemble LB: 0.809x
+#########################################################
+Submit: (14 dec. 2020)
+Validation auc: 0.8085 (Transformer)
+Validation auc: 0.8043 (LSTM) 
+Validation auc: 0.8041 (GRU)
+Ensemble Validation: 0.8099
+Ensemble LB: 0.810x
+#########################################################
+Submit: (20 dec. 2020)
+Validation auc: 0.8093 (Transformer)
+Validation auc: 0.8050 (LSTM) 
+Validation auc: 0.8044 (GRU)
+Ensemble Validation: 0.8105
+Ensemble LB: 0.811x
+#########################################################
+Submit: (21 dec. 2020)
+Validation auc: 0.8100 (Transformer)
+Validation auc: 0.8050 (LSTM) 
+Validation auc: 0.8044 (GRU)
+Ensemble Validation: 0.8110 (Linear)
+Ensemble LB: 0.811x
+#########################################################
+Submit: (25 dec. 2020)
+Validation auc: 0.8100 (Transformer)
+Validation auc: 0.8050 (LSTM) 
+Validation auc: 0.8048 (GRU)
+Ensemble Validation: 0.8114 (Lgbm)
+Ensemble LB: 0.811x
+#########################################################
+Submit: (29 dec. 2020)
+Validation auc: 0.8100 (Transformer)
+Validation auc: 0.8056 (LSTM) 
+Validation auc: 0.8057 (GRU)
+Ensemble Validation: 0.8113 (Linear)
+Ensemble LB: 0.811x
+#########################################################
+Submit: (29 dec. 2020)
+Validation auc: 0.8100 (Transformer)
+Validation auc: 0.8056 (LSTM) 
+Validation auc: 0.8057 (GRU)
+Ensemble Validation: 0.8117 (Lgbm)
+Ensemble LB: 0.812x
+#########################################################
+Submit: (30 dec. 2020)
+Validation auc: 0.8100 (Transformer)
+Validation auc: 0.8062 (LSTM) 
+Validation auc: 0.8060 (GRU)
+Ensemble Validation: 0.8119 (Lgbm)
+Ensemble LB: 0.812x
+#########################################################
