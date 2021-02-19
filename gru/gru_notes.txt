@@ -1,0 +1,87 @@
+Optimized on 20% of the data and GRU model
+Study statistics: 
+  Number of finished trials:  100
+  Number of pruned trials:  72
+  Number of complete trials:  28
+Best trial:
+  Value:  0.7914801692745056
+  Params: 
+    input_size: 320
+    hidden_size: 512
+    num_layers: 3
+    dropout_rate: 0.011009031480914144
+    lr: 0.0006951187071982431
+    warmup_steps: 20
+Hyperparameter importance:
+OrderedDict([('lr', 0.4650503349967485),
+             ('dropout_rate', 0.29501741525055825),
+             ('input_size', 0.16344215619706565),
+             ('hidden_size', 0.06628736311769329),
+             ('warmup_steps', 0.0074326614677155695),
+             ('num_layers', 0.002770068970218666)])
+ 
+Submit: (GRU)
+Train auc: 0.7972 ### Validation auc: 0.7962
+Train auc: 0.8036 ### Validation auc: 0.8011
+Train auc: 0.8081 ### Validation auc: 0.8033
+Train auc: 0.8115 ### Validation auc: 0.8043
+Train auc: 0.8124 ### Validation auc: 0.8041 LB: 0.805x
+
+######################################################
+Submit: (12. dec 2020)
+input_size_gru = 320
+hidden_size_gru = 512
+num_layers_gru = 3
+epochs = 4
+batch_size = 64
+lr = 0.0006951187071982431
+warmup_steps = 20
+Results:
+Train auc: 0.7976 ### Validation auc: 0.7964
+Train auc: 0.8041 ### Validation auc: 0.8015
+Train auc: 0.8088 ### Validation auc: 0.8039
+Train auc: 0.8102 ### Validation auc: 0.8041
+######################################################
+Best searched on 95%-2.5% of the data
+[I 2020-12-15 18:03:54,353] Trial 9 finished with value: 0.8027193296392097 and parameters: {'input_size': 256, 'hidden_size': 704, 'num_layers': 4, 'lr': 0.00046709275939706027, 'warmup_steps': 0}. Best is': 0}. Best is trial 9 with value: 0.8027193296392097.
+97.5%-2.5% score: 0.8042
+######################################################
+max quest=300
+input_size_gru = 320
+hidden_size_gru = 512
+num_layers_gru = 3
+epochs = 4
+batch_size = 64
+lr = 0.0006951187071982431
+warmup_steps = 20
+Results:
+Train auc: 0.7973 ### Validation auc: 0.7964
+Train auc: 0.8044 ### Validation auc: 0.8019
+Train auc: 0.8087 ### Validation auc: 0.8041
+Train auc: 0.8100 ### Validation auc: 0.8044 
+######################################################
+[I 2020-12-21 04:07:45,350] Trial 10 finished with value: 0.8045010320810857 and parameters: {'lr': 0.0008419253431185227, 'warmup_steps': 80}. Best is trial 10 with value: 0.8045010320810857.
+Results:
+Validation auc: 0.7966
+Validation auc: 0.8019
+Validation auc: 0.8043
+Validation auc: 0.8045 
+
+(+1 dense layer)
+Validation auc: 0.7978
+Validation auc: 0.8024
+Validation auc: 0.8047 
+Validation auc: 0.8048 
+######################################################
+(explanation + part embeddings)
+epoch 1: 0.7982
+epoch 2: 0.8032
+epoch 3: 0.8054
+epoch 4: 0.8057 
+########################################################################################################################
+(+ tags)
+Validation auc: 0.7986
+Validation auc: 0.8034
+Validation auc: 0.8058
+Validation auc: 0.8060 [currently best]
+########################################################################################################################
