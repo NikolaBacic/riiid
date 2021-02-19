@@ -1,0 +1,63 @@
+Submit: (LSTM)
+input_size = 320
+hidden_size = 512
+num_layers = 3
+dropout_rate = 0.011009031480914144
+epochs = 4
+batch_size = 64
+lr = 0.0006951187071982431
+warmup_steps = 20
+
+Train auc: 0.7966 ### Validation auc: 0.7959
+Train auc: 0.8031 ### Validation auc: 0.8013
+Train auc: 0.8068 ### Validation auc: 0.8038
+Train auc: 0.8077 ### Validation auc: 0.8042 LB: ????
+
+hidden_size = 768
+Train auc: 0.7969 ### Validation auc: 0.796
+Train auc: 0.8039 ### Validation auc: 0.802
+Train auc: 0.8075 ### Validation auc: 0.8043
+Train auc: 0.8085 ### Validation auc: 0.8046
+
+########################################################################################################################
+[I 2020-12-11 17:28:47,829] Trial 0 finished with value: 0.7908640778635431 and parameters: {'input_size': 256, 'hidden_size': 640, 'num_layers': 3, 'lr': 0.002597987590502602, 'warmup_steps': 150}. Best is trial 0 with value: 0.7908640778635431.
+Submit: (12. dec 2020)
+Train auc: 0.8099 ### Validation auc: 0.8033
+
+[I 2020-12-12 02:49:40,962] Trial 24 finished with value: 0.7910400633693949 and parameters: {'input_size': 384, 'hidden_size': 768, 'num_layers': 3, 'lr': 0.0015386876446019772, 'warmup_steps': 120}. Best is trial 24 with value: 0.7910400633693949.
+Submit: (13. dec 2020)
+Train auc: 0.8114 ### Validation auc: 0.8043 
+
+[I 2020-12-12 19:25:41,225] Trial 86 finished with value: 0.7911526694012323 and parameters: {'input_size': 384, 'hidden_size': 768, 'num_layers': 3, 'lr': 0.001717769777252226, 'warmup_steps': 90}. Best is trial 86 with value: 0.7911526694012323.
+Submit: (13. dec 2020) (Optuna's best)
+Train auc: 0.8111 ### Validation auc: 0.804
+
+5*warmup_steps:5*90 (13.dec)
+Train auc: 0.8117 ### Validation auc: 0.8041
+########################################################################################################################
+[I 2020-12-19 10:18:04,873] Trial 3 finished with value: 0.8047280571837608 and parameters: {'num_layers': 4, 'lr': 0.0007019926812886481, 'warmup_steps': 100}. Best is trial 3 with value: 0.8047280571837608. (max_quest=256)
+Result: 0.8050 (with max_quest=300)
+
+[I 2020-12-19 22:51:14,564] Trial 8 finished with value: 0.8050069615285929 and parameters: {'num_layers': 3, 'lr': 0.0011075741116838937, 'warmup_steps': 160}. Best is trial 8 with value: 0.8050069615285929.
+Result: 0.8045 (with max_quest=300)
+########################################################################################################################
+Best trial: /value=0.7914464174219985/params={'lr': 0.001693808336896639, 'warmup_steps': 140}
+Results(on 100%): 0.8046
+########################################################################################################################
+(explanation + part embeddings)
+epoch 1: 0.7974
+epoch 2: 0.8031
+epoch 3: 0.8053
+epoch 4: 0.5056 
+########################################################################################################################
+(+tags)
+Validation auc: 0.7985
+Validation auc: 0.8036
+Validation auc: 0.8059
+Validation auc: 0.8062 
+########################################################################################################################
+(fixed quest lagz)
+Validation auc: 0.7986
+Validation auc: 0.804
+Validation auc: 0.806
+Validation auc: 0.8063 [CURRENTLY BEST]
