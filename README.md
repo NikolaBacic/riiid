@@ -5,4 +5,4 @@ Code for Riiid kaggle competition
 
 [Detailed model explanation](https://www.kaggle.com/c/riiid-test-answer-prediction/discussion/209713)
 
-Placed 17/3395
+Placed 17th/3395
