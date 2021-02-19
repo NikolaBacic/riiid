@@ -1,0 +1,143 @@
+##################### EXPERIMENTS NOTES ##############################
+
+Curently best score:
+
+CV: 0.756(10%) (0.7634)(100%) LB: 0.771
+
+##################### Xavier initialization ##############################
+
+CV: 0.7597(10%) 0.7664(100%) LB: 0.775
+
+##################### Positional encodings ##############################
+1. Trigonometrical
+1.1 The Annotated Transformer implementation
+        DID NOT HELP
+1.2 PyTorch implementation
+        DID NOT HELP
+2. learnable positions
+        DID NOT HELP
+##################### Gradient clipping ##############################
+(10%)
+default -> train: 0.7648 val: 0.7596
+0.1     -> train: 0.7562 val: 0.7526
+0.2     -> train: 0.7632 val: 0.7583
+0.4     -> train: 0.7639 val: 0.7589
+0.8     -> train: 0.7650 val: 0.7595
+1.0     -> train: 0.7649 val: 0.7595
+1.6     -> train: 0.7653 val: 0.7596
+DID NOT HELP
+##################### weight decay ##############################
+(10%)
+default -> train: 0.7648 val: 0.7596
+0.1     -> train: 0.7076 val: 0.7085
+0.01    -> train: 0.7456 val: 0.7430
+0.001   -> train: 0.7551 val: 0.7526
+0.0001  -> train: 0.7608 val: 0.7576
+0.00001 -> train: 0.7634 val: 0.7589
+DID NOT HELP
+##################### Optimizers ##############################
+(10%)
+default -> train: 0.7648 val: 0.7596
+AdamW:  -> train: 0.7649 val: 0.7596
+SGD :   -> train: 0.6240 val: 0.6209
+vanila Adam stays the beste
+##################### prior_question_had_explanation ##############################
+(10%)
+Gives about +0.0002 (mayyyybe)
+(DON'T USE IT MOVING FORWARD)
+##################### prior_question_elapsed_time ##############################
+
+Categorical 0-301 encoding
+
+CV: 0.7602 (10%) (epoch 1)
+
+CV: 0.7692 (100%) (epoch 1)
+CV: 0.7710 (100%) (epoch 2)
+CV: 0.7745 (100%) (epoch 3)
+
+##################### quest lag time ##############################
+
+CV: 0.7626 (10%) (epoch 1)
+CV: 0.7724 (10%) (epoch 1) (log lag lol)
+
+CV: 0.7844 (100%) (epoch 1)
+CV: 0.7862 (100%) (epoch 2)
+CV: 0.7879 (100%) (epoch 3) 
+CV: 0.7887 (100%) (epoch 4) LB: 0.797
+CV: 0.7890 (100%) (epoch 5)
+
+##################### try to go deeper ##############################
+
+CV: 0.7745 (10%) (epoch 3)
+CV: 0.7752 (10%) (epoch 3) (4 decoder layers)
+CV: 0.7723 (10%) (epoch 3) (d_model = 256)
+CV: 0.7749 (10%) (epoch 3) (4 encoder layers)
+
+CV: 0.7885 (100%) (epoch 4 (or maybe 3)) (4 encoder layers)
+
+DID NOT HELP
+
+##################### lectures lag ##############################
+
+DID NOT HELP
+
+##################### transformers -> encoder ##############################
+
+Ditching the lectures part in the transformer.
+
+CV: 0.7860 (100%) (epoch 2)
+CV: 0.7872 (100%) (epoch 3) LB: 0.796
+CV: 0.7893 (100%) (epoch 4) LB: 0.796
+CV: 0.7900 (100%) (epoch 5) LB: 0.795
+
+##################### current score ##############################
+
+(10%) CV seed 420: 0.7725 seed 26: 0.7725 seed 42: 0.7724 seed 0: 0.7724
+
+##################### question's part embeddings ##############################
+
+(10%) CV seed 420: 0.7759 seed 26: 0.7756 seed 42: 0.7755 seed 0: 0.7759
+
+(100%)
+CV: 0.7846 (100%) (epoch 1)
+CV: 0.7868 (100%) (epoch 2)
+CV: 0.7889 (100%) (epoch 3) LB: submission scoring error whatever...
+
+##################### optuna optimized hyperparameters ##############################
+
+searched on 8% train - 2% validation 4 epochs:
+[I 2020-11-28 03:31:19,357] Trial 21 finished with value: 0.7751202475838526 and parameters: {'nhead': 11, 'n_head_dim': 27, 'dim_feedforward': 1971, 'num_encoder_layers': 4, 'dropout_rate': 0.007915238897011716, 'lr': 0.00041788617687687026, 'warmup_prop': 0.015789538964112376}. Best is trial 21 with value: 0.7751202475838526.
+
+80% - 20% split
+3 epochs -> 0.7985(train) 0.7944(val) LB: 0.802
+4 epochs -> 0.8036(train) 0.7978(val) LB: 0.804
+
+##################### no out of context questions ##############################
+
+80% - 20% split
+4 epochs -> 0.8075(train) 0.8016(val) LB: 0.805
+
+##################### new optuna optimization ##############################
+
+optuna - 17.5M(train)-2.5M(validation)
+Trial 16 finished with value: 0.7842422017960007 and parameters: {'nhead': 10, 'n_head_dim': 57, 'dim_feedforward': 2034, 'num_encoder_layers': 6, 'dropout_rate_enc': 0.03054817323162544, 'dropout_rate_lin': 0.10952019961282125, 'lr': 0.00011916444649105454, 'warmup_prop': 0.04038945150303195}.
+
+submit: (2.5% validation)
+Epochs:
+Train auc: 0.7868 ### Validation auc: 0.7863
+Train auc: 0.7949 ### Validation auc: 0.7934
+Train auc: 0.8025 ### Validation auc: 0.8
+Train auc: 0.8075 ### Validation auc: 0.8037
+Train auc: 0.8087 ### Validation auc: 0.8043 LB: 0.806
+
+########
+
+[I 2020-12-05 11:15:13,510] Trial 85 finished with value: 0.784816186464505 and parameters: {'nhead': 10, 'n_head_dim': 59, 'dim_feedforward': 2039, 'num_encoder_layers': 6, 'dropout_rate_enc': 0.02849249430373342, 'dropout_rate_lin': 0.0006378839213134341, 'lr': 0.0001997650219146838, 'warmup_prop': 0.013052647659278058}. Best is trial 85 with value: 0.784816186464505.
+
+submit: (2.5% validation)
+Epochs:
+Train auc: ?????? ### Validation auc: ??????
+Train auc: ?????? ### Validation auc: ??????
+Train auc: 0.8057 ### Validation auc: 0.8031
+Train auc: 0.8101 ### Validation auc: 0.8059
+Train auc: 0.8115 ### Validation auc: 0.8064 LB: 0.808

@@ -1,0 +1,167 @@
+Optimized on 20% of the data
+Study statistics:
+  Number of finished trials:  100
+  Number of pruned trials:  74
+  Number of complete trials:  26
+Best trial:
+  Value:  0.7846035470307101 (OLDER VERSION TESTED 0.7837; but that version was optimized for 6 encoding layers)
+  Params:
+    dropout_rate: 0.021658577546302356
+    lr: 0.0003350935230981522
+    warmup_steps: 200
+  
+Fixed parameters:    
+nhead = 8
+head_dim = 64
+dim_feedforward = 2048
+num_encoder_layers = 4
+epochs = 5
+batch_size = 64
+    
+Hyperparameter importance:
+OrderedDict([('lr', 0.8483220399782816),
+             ('dropout_rate', 0.14451758202596018),
+             ('warmup_steps', 0.0071603779957581555)])
+
+################################ NEW OPTIMIZATION (optimized on 4 encoder layer) #######################################
+nhead = 8
+head_dim = 64
+dim_feedforward = 2048
+dropout_rate = 0.021658577546302356
+epochs = 5
+batch_size = 64
+lr = 0.0003350935230981522
+warmup_steps = 200
+
+encoder layers = 4
+Train auc: 0.7879 ### Validation auc: 0.7873
+Train auc: 0.7955 ### Validation auc: 0.7941
+Train auc: 0.8032 ### Validation auc: 0.8005
+Train auc: 0.8076 ### Validation auc: 0.8037
+Train auc: 0.8089 ### Validation auc: 0.8043 LB:0.804x
+
+num_encoder_layers = 6
+Train auc: 0.7884 ### Validation auc: 0.7878
+Train auc: 0.7976 ### Validation auc: 0.7962
+Train auc: 0.8047 ### Validation auc: 0.8027
+Train auc: 0.8091 ### Validation auc: 0.8058
+Train auc: 0.8105 ### Validation auc: 0.8066 LB: ?.???
+
+################################ OLD OPTIMIZATION (optimized on 6 encoder layer) #######################################
+nhead = 10
+head_dim = 59
+dim_feedforward = 2039
+num_encoder_layers = 6
+dropout_rate = 0.02849249430373342
+epochs = 5
+batch_size = 64
+lr = 0.0001997650219146838
+warmup_steps = 162
+
+Train auc: 0.7886 ### Validation auc: 0.7881
+Train auc: 0.7970 ### Validation auc: 0.7957
+Train auc: 0.8055 ### Validation auc: 0.8033
+Train auc: 0.8101 ### Validation auc: 0.8066
+Train auc: 0.8115 ### Validation auc: 0.8072. LB: 0.807x
+
+#####################################################################################################################################################
+[I 2020-12-13 13:54:00,627] Trial 19 finished with value: 0.7851400861856765 and parameters: {'nhead': 10, 'head_dim': 60, 'lr': 0.00019809259513409007, 'warmup_steps': 150}. Best is trial 19 with value: 0.7851400861856765.
+epoch 1: 0.7879
+epoch 2: 0.7971
+epoch 3: 0.8050
+epoch 4: 0.8081
+epoch 5: 0.8086 
+#####################################################################################################################################################
+max_quest = 300
+nhead = 10
+head_dim = 60
+dim_feedforward = 2048
+num_encoder_layers = 6
+epochs = 6
+batch_size = 64
+lr = 0.00019809259513409007
+warmup_steps = 150*5
+epoch 5: 0.8093 
+epoch 6: 0.8092
+#####################################################################################################################################################
+max_quest = 300
+nhead = 8
+head_dim = 60
+dim_feedforward = 2048
+num_encoder_layers = 8
+epochs = 6
+batch_size = 64
+lr = 0.00019809259513409007
+warmup_steps = 150*5
+epoch 1: 0.7879
+epoch 2: 0.7957
+epoch 3: 0.8048
+epoch 4: 0.8084
+epoch 5: 0.8100
+epoch 6: 0.8100 [Currently best]
+#####################################################################################################################################################
+max_quest = 300
+nhead = 6
+head_dim = 64
+dim_feedforward = 2048
+num_encoder_layers = 10
+epochs = 6
+batch_size = 64
+lr = 0.00019809259513409007
+warmup_steps = 150*5
+epoch 1: 0.7884
+epoch 2: 0.7956
+epoch 3: 0.8027
+epoch 4: 0.8068
+epoch 5: 0.8086
+epoch 6: 0.8086
+#####################################################################################################################################################
+max_quest = 300
+nhead = 8
+head_dim = 60
+dim_feedforward = 2048
+num_encoder_layers = 8
+epochs = 5
+batch_size = 64
+lr = 0.00019809259513409007
+warmup_steps = 150*5
+epoch 1: 0.7879
+epoch 2: 0.7959
+epoch 3: 0.8053
+epoch 4: 0.8087
+epoch 5: 0.8093
+#####################################################################################################################################################
+max_quest = 300
+nhead = 8
+head_dim = 60
+dim_feedforward = 2048
+num_encoder_layers = 8
+epochs = 6
+batch_size = 64
+lr = 0.0004325823285584033
+warmup_steps = 300
+
+[I 2020-12-23 20:54:41,465] Trial 0 finished with value: 0.8037985787277085 and parameters: {'lr': , 'warmup_steps': 300}. Best is trial 0 with value: 0.8037985787277085.
+epoch1: 0.7870
+epoch2: 0.7980
+epoch3: 0.8038
+epoch4: 0.8072
+epoch5: 0.8091
+epoch6: 0.8092
+
+[I 2020-12-25 10:48:50,756] Trial 8 finished with value: 0.8043358696303008 and parameters: {'lr': 0.00023217410649243673, 'warmup_steps': 600}. Best is trial 8 with value: 0.8043358696303008.
+epoch1: 0.7876
+epoch2: 0.7957
+epoch3: 0.8048
+epoch4: 0.8084
+epoch5: 0.8099
+epoch6: 0.8099
+#####################################################################################################################################################
+(+explanation and tagz)
+Validation auc: 0.7890
+Validation auc: 0.7997
+Validation auc: 0.8052
+Validation auc: 0.8081
+Validation auc: 0.8097
+Validation auc: 0.8098
+#####################################################################################################################################################
